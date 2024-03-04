@@ -1,0 +1,25 @@
+{
+  "name": "vue3-custom-directives",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild:package": "npm run clean && npm run compile && node dist/setupPackage.js",
+    "build:package": "cd dist && npm publish"
+  },
+  "keywords": [
+    "vue3",
+    "directives"
+  ],
+  "author": "一狗捷",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.22",
+    "typescript": "^5.3.3",
+    "ant-design-vue": "^4.1.2",
+    "rimraf": "^5.0.5",
+    "vue": "^3.4.21"
+  }
+}
