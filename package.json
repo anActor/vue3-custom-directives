@@ -7,7 +7,8 @@
     "compile": "tsc",
     "clean": "rm -rf dist",
     "prebuild:package": "npm run clean && npm run compile && node dist/setupPackage.js",
-    "build:package": "cd dist && npm publish"
+    "build:package": "cd dist && npm publish",
+    "commit": "git add . && git-cz"
   },
   "keywords": [
     "vue3",
@@ -17,9 +18,16 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.22",
-    "typescript": "^5.3.3",
     "ant-design-vue": "^4.1.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
     "vue": "^3.4.21"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
